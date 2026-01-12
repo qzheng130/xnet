@@ -1,0 +1,9 @@
+add_executable(multiplex_server multiplexer.cc)
+target_link_libraries(multiplex_server xnet_net)
+
+add_executable(multiplex_server_simple multiplexer_simple.cc)
+target_link_libraries(multiplex_server_simple xnet_net)
+
+add_executable(multiplex_demux demux.cc)
+target_link_libraries(multiplex_demux xnet_net)
+

@@ -1,0 +1,5 @@
+add_executable(wordcount_hasher hasher.cc)
+target_link_libraries(wordcount_hasher xnet_net)
+
+add_executable(wordcount_receiver receiver.cc)
+target_link_libraries(wordcount_receiver xnet_net)
