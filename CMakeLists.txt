@@ -70,18 +70,12 @@ get_property(pkg_vars DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VARIABLES)
 
 find_package(GTest)
 include_directories(${GTEST_INCLUDE_DIRS})
-MESSAGE(${GTEST_INCLUDE_DIRS})
-MESSAGE(${GTEST_BOTH_LIBRARIES})
-MESSAGE(${GTEST_LIBRARIES})
-MESSAGE(${GTEST_MAIN_LIBRARIES})
 
 find_package(Protobuf)
 find_package(CURL REQUIRED)
 find_package(ZLIB REQUIRED)
 
-# 查找头文件路径
 find_path(CARES_INCLUDE_DIR ares.h)
-# 查找库文件路径
 find_library(CARES_LIBRARY NAMES cares)
 find_path(MHD_INCLUDE_DIR microhttpd.h)
 find_library(MHD_LIBRARY NAMES microhttpd)
